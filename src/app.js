@@ -4,7 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
 
-const animesRoute = require('./routes/animes');
+const routes = require('./routes/index');
 
 // Set up the server
 const PORT = process.env.PORT || 8080;
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cors());
 
 // Define the API routes
-app.use('/api/animes', animesRoute);
+app.use(routes);
 
 // Start the server
 app.listen(PORT, () => console.log('Server listening on port 8080'));

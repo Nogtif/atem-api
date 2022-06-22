@@ -1,50 +1,50 @@
 const router = require('express').Router();
-const Anime = require('../models/Anime');
+const Manga = require('../models/Manga');
 
 router.get('/', async (req, res) => {
   try {
-    const animes = await Anime.find(req.body);
-    res.status(200).json(animes);
+    const mangas = await Manga.find(req.body);
+    res.status(200).json(mangas);
   } catch(err) {
     res.status(500).send(err);
   }
 });
 
-// Finds anime by ID
+// Finds manga by ID
 router.get('/:id', async (req, res) => {
   try {
-    const anime = await Anime.findById(req.params.id);
-    res.status(200).json(anime);
+    const manga = await Manga.findById(req.params.id);
+    res.status(200).json(manga);
   } catch(err) {
     res.status(500).send(err);
   }
 });
 
-// Create an anime
+// Create an manga
 router.post('/', async (req, res) => {
   try {
-    const anime = await Anime.create(req.body);
-    res.status(201).json(anime);
+    const manga = await Manga.create(req.body);
+    res.status(201).json(manga);
   } catch(err) {
     res.status(500).send(err);
   }
 });
 
-// Update an anime
+// Update an manga
 router.put('/:id', async (req, res) => {
   try {
-    const anime = await Anime.findByIdAndUpdate(req.params.id, req.body);
-    res.status(200).json(anime);
+    const manga = await Manga.findByIdAndUpdate(req.params.id, req.body);
+    res.status(200).json(manga);
   } catch(err) {
     res.status(500).send(err);
   }
 });
 
-// Delete an anime
+// Delete an manga
 router.delete('/:id', async (req, res) => {
   try {
-    await Anime.findByIdAndRemove(req.params.id);
-    res.status(200).json('The anime has been deleted...');
+    await Manga.findByIdAndRemove(req.params.id);
+    res.status(200).json('The manga has been deleted...');
   } catch(err) {
     res.status(500).send(err);
   }
