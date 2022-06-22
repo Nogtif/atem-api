@@ -8,7 +8,7 @@
     "lint": "eslint **/*.js"
   },
   "keywords": [],
-  "author": "Sowtch",
+  "author": "Nogtif",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -20,7 +20,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "express": "^4.17.1",
-    "mongoose": "^5.13.7",
+    "mongoose": "^6.4.0",
     "nodemon": "^2.0.7"
   }
 }

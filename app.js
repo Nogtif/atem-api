@@ -12,12 +12,7 @@ app.set('port', PORT);
 
 // Connect to the database
 mongoose
-  .connect('mongodb://localhost/atem', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: true,
-    useCreateIndex: true
-  })
+  .connect('mongodb://localhost/atem')
   .then(() => console.log('DB Connection Successfull!'))
   .catch((error) => console.log(error));
 
