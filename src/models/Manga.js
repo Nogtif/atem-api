@@ -2,14 +2,16 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 /**
- * g
+ * Manga Schema
+ *
+ * Defines fields and its validations and constraints.
  */
 const mangaSchema = new mongoose.Schema({
-  reference: { type: String, required: true },
+  reference: { type: String, required: true, unique: true },
   title: { type: String, required: true },
   originalTitle: { type: String, default: '' },
   synopsis: { type: String, default: '' },
-  type: { type: String, enum: ['MOVIE', 'SERIES'], required: true, default: 'SERIES' },
+  type: { type: String, default: '' },
   status: { type: String, enum: ['PENDING', 'IN PROGRESS', 'ENDED'], required: true, default: 'PENDING' },
   author: { type: String, default: '' },
   thumbnail: { type: String, default: '' },

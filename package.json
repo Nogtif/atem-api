@@ -1,15 +1,21 @@
 {
   "name": "api",
   "version": "1.0.0",
+  "description": "An Express REST API using mongodb for Atem project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js --exec  \"npm run lint && node\"",
-    "lint": "eslint **/*.js"
+    "build": "babel src -s -D -d dist --presets es6,stage-0",
+    "start": "node dist",
+    "lint": "eslint **/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nogtif/atem-api"
   },
   "keywords": [],
   "author": "Nogtif",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

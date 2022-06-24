@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 /**
- * g
+ * Season Schema
+ *
+ * Defines fields and its validations and constraints.
  */
 const seasonSchema = new mongoose.Schema({
   reference: { type: String, required: true },
