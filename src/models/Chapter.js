@@ -8,9 +8,11 @@ const mongoose = require('mongoose');
 const chapterSchema = new mongoose.Schema({
   reference: { type: String, required: true },
   title: { type: String, required: true },
+  description: { type: String },
   date: { type: Date, default: Date.now },
+  pages: { type: Array, default: [] },
   views: { type: Number, default: 0 },
-  link: { type: String }
+  language: { type: String, default: 'fr' }
 }, { versionKey: false });
 
 module.exports = mongoose.model('Chapter', chapterSchema);

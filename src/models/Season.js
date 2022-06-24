@@ -8,7 +8,8 @@ const schema = mongoose.Schema;
  */
 const seasonSchema = new mongoose.Schema({
   reference: { type: String, required: true },
-  name: { type: String, required: true },
+  title: { type: String, required: true },
+  description: { type: String },
   chapters: [{ type: schema.Types.ObjectId, ref: 'Chapter' }]
 }, { versionKey: false });
 
