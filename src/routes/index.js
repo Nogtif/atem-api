@@ -3,12 +3,6 @@ const mangas = require('./mangas');
 const router = express.Router();
 
 /**
- * Main Resource
- * Just a little title :)
- */
-router.get('/', (req, res) => res.send('Atem API 1.0'));
-
-/**
  * Manga Resource
  * Resource allowing managing mangas.
  */
