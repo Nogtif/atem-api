@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 /**
- * Episode Schema
+ * Chapter Schema
  *
  * Defines fields and its validations and constraints.
  */
-const episodeSchema = new mongoose.Schema({
+const chapterSchema = new mongoose.Schema({
   reference: { type: String, required: true },
   title: { type: String, required: true },
   description: { type: String },
@@ -15,4 +15,4 @@ const episodeSchema = new mongoose.Schema({
   language: { type: String, default: 'fr' }
 }, { versionKey: false });
 
-module.exports = mongoose.model('Episode', episodeSchema);
+module.exports = mongoose.model('Chapter', chapterSchema);

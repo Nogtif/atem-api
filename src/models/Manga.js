@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 /**
- * Anime Schema
+ * Manga Schema
  *
  * Defines fields and its validations and constraints.
  */
-const animeSchema = new mongoose.Schema({
+const mangaSchema = new mongoose.Schema({
   reference: { type: String, required: true, unique: true },
   title: { type: String, required: true },
   originalTitle: { type: String, default: '' },
@@ -26,4 +26,4 @@ const animeSchema = new mongoose.Schema({
   seasons: [{ type: schema.Types.ObjectId, ref: 'Season' }]
 }, { versionKey: false });
 
-module.exports = mongoose.model('Anime', animeSchema);
+module.exports = mongoose.model('Manga', mangaSchema);
