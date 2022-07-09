@@ -1,5 +1,5 @@
 const express = require('express');
-const mangas = require('./mangas');
+const animes = require('./animes');
 const router = express.Router();
 
 /**
@@ -9,10 +9,10 @@ const router = express.Router();
 router.get('/', (req, res) => res.send('Atem API 1.0'));
 
 /**
- * Manga Resource
+ * Anime Resource
  * Resource allowing managing animes.
  */
-router.use('/mangas', mangas);
+router.use('/animes', animes);
 
 /**
  * Health
