@@ -24,7 +24,7 @@ router.get('/', async (req, res, next) => {
  * @return a [Anime] matching with the anime retrieved from the reference.
  */
 router.get('/:reference', async (req, res, next) => {
-  Anime.findById(req.params.reference, (error, anime) => {
+  Anime.findOne({ reference: req.params.reference }, (error, anime) => {
     return !error ? res.status(200).json(anime) : next(error);
   });
 });
